@@ -1,0 +1,39 @@
+
+<form [formGroup] = "formEstudiante" (ngSubmit)="onSubmit()"  class="grid  formgrid">
+
+<div class="col-6">    
+<mat-form-field class="w-full">
+    <mat-label>Nombre</mat-label>
+    <input formControlName = "nombre" matInput type="text" >
+</mat-form-field>
+</div>
+
+<div class="col-6">
+<mat-form-field class="w-full">
+    <mat-label>Apellido</mat-label>
+    <input formControlName="apellido" matInput type="text" >
+</mat-form-field>
+</div>
+
+<div class="col-6">
+<mat-form-field class="w-full">
+    <mat-label>Email</mat-label>
+    <input formControlName="email" matInput type="email" >
+</mat-form-field>
+</div>
+
+<div class="col-6">
+<mat-form-field class="w-full">
+    <mat-label>Edad</mat-label>
+    <input formControlName="edad" matInput type="number" >
+</mat-form-field>
+</div>
+
+<div class="col-12 flex justify-content-end">
+<button mat-flat-button color="primary">GUARDAR</button>
+
+</div>
+
+</form>
+
+<pre>{{formEstudiante.value | json}} </pre>
